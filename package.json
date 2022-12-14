@@ -20,12 +20,13 @@
   "dependencies": {
     "@iobroker/adapter-core": "^2.5.1",
     "@sentry/node": "^5.30.0",
-    "esphome-native-api": "^1.0.9",
+    "esphome-native-api": "https://github.com/nicerloop/esphome-native-api.git",
     "nopy": "^0.2.7",
     "tree-kill": "^1.2.2"
   },
   "devDependencies": {
     "@alcalzone/release-script": "^1.10.0",
+    "@iobroker/adapter-dev": "^1.2.0",
     "@iobroker/testing": "^2.4.2",
     "@types/chai": "^4.2.21",
     "@types/chai-as-promised": "^7.1.4",
@@ -60,7 +61,8 @@
     "install": "npip install",
     "nopy": "nopy",
     "npip": "npip",
-    "dashboard": "npm run -s nopy ./python_modules/bin/esphome config/ dashboard"
+    "dashboard": "npm run -s nopy ./.dev-server/default/node_modules/iobroker.esphome/python_modules/bin/esphome ./config/ dashboard",
+    "dev-server": "dev-server"
   },
   "python": {
     "execPath": [
