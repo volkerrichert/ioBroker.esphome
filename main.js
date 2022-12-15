@@ -737,7 +737,8 @@ class Esphome extends utils.Adapter {
 				// console.log(`An attribute has changed : ${state}`);
 				await this.extendObjectAsync(objName, {
 					type: 'state',
-					common
+					common,
+					native: {}
 				});
 
 			} else {
@@ -1034,13 +1035,13 @@ class Esphome extends utils.Adapter {
 						this.deviceInfo[deviceIP][device[4]].states[device[5]] = writeValue;
 
 					} else if (device[5] === 'effect') {
-						
+
 						this.deviceInfo[deviceIP][device[4]].states.effect = writeValue;
-						
+
 					} else if (device[5] === 'state') {
-						
+
 						this.deviceInfo[deviceIP][device[4]].states.state = writeValue;
-						
+
 					}
 
 					const data = {
